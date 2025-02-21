@@ -1,12 +1,23 @@
-import logo from '../../assets/logo.svg'
+import logo from '../../../assets/logo.svg'
 
 import Image from 'next/image'
 import Raking from './raking'
 import { Stats } from './stats'
 import { InviteLinkInput } from './invite-link-input'
 
-export default function InvitePage() {
-    const inviteLink = 'http://localhost:3000/invite/12341231241241'
+
+interface InvitePageProps{
+    params:Promise<{
+        subscriberId:string
+    }>
+}
+
+
+export default async function InvitePage(props:InvitePageProps) {
+    const {subscriberId} = await props.params
+
+    const inviteLink = `http://localhost:3333/invites/${subscriberId}`
+
     return (
         <div className="min-h-dvh flex items-center justify-between gap-16 flex-col md:flex-row">
             <div className="flex flex-col gap-10 w-full max-w-[550px]">
@@ -23,7 +34,7 @@ export default function InvitePage() {
                         <p className='text-gray-300'>Convide mais pessoas para o evento e concorra a prêmios exclusivos! É só compartilhar o link abaixo e acompanhar as inscrições:</p>
                     </div>
                     <InviteLinkInput inviteLink={inviteLink}/>
-                    <Stats/>
+                    <Stats subscriberId={subscriberId}/>
                 </div>
             </div>
             <Raking />
