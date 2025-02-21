@@ -43,7 +43,7 @@ export function SubscriptionForm() {
                 <div className="space-y-2">
                     <InputRoot>
                         <InputIcon>
-                            <User />
+                            <User  className="size-4"/>
                         </InputIcon>
                         <InputField
                             type='text'
@@ -60,7 +60,7 @@ export function SubscriptionForm() {
                 <div className="space-y-2">
                     <InputRoot>
                         <InputIcon>
-                            <Mail />
+                            <Mail  className="size-4"/>
                         </InputIcon>
                         <InputField
                             type='email'

@@ -20,7 +20,7 @@ export function InviteLinkInput({inviteLink}: InviteLinkInputProps) {
 
             <InputField readOnly defaultValue={inviteLink} />
 
-            <IconButton className="-mr-2"  onClick={copyInviteLink}>
+            <IconButton  className="my-1.5 mr-0.5" onClick={copyInviteLink}>
                 <Copy className="size-5" />
             </IconButton>
         </InputRoot>

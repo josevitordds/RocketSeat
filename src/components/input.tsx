@@ -42,7 +42,7 @@ interface InputIconProps extends ComponentProps<'span'> {}
 export function InputIcon( props : InputIconProps) {
     return (
         <span 
-        className="text-gray-400 group-focus-within:text-gray-100 group-[&:not(:has(input:placeholder-shown))]:text-gray-100 group-data-[error=true]:text-danger"
+        className="flex items-center justify-center pl-0.5 text-gray-400 group-focus-within:text-gray-100 group-[&:not(:has(input:placeholder-shown))]:text-gray-100 group-data-[error=true]:text-danger"
         {...props} 
         />
     )
